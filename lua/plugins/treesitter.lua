@@ -1,5 +1,5 @@
 return {
-  { "romgrk/nvim-treesitter-context" },
+  { "nvim-treesitter/nvim-treesitter-context" },
   -- add more treesitter parsers
   {
     "nvim-treesitter/nvim-treesitter",
