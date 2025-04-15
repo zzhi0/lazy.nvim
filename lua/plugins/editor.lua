@@ -1,34 +1,6 @@
 return {
-  -- disabled
-  { "ggandor/flit.nvim", enabled = false },
-  { "ggandor/leap.nvim", enabled = false },
-  { "folke/flash.nvim", enabled = false },
-
   -- align
   { "junegunn/vim-easy-align" },
-
-  -- window picker
-  -- {
-  --   "s1n7ax/nvim-window-picker",
-  --   tag = "head",
-  --   config = function()
-  --     require("window-picker").setup({
-  --       autoselect_one = true,
-  --       include_current = false,
-  --       filter_rules = {
-  --         -- filter using buffer options
-  --         bo = {
-  --           -- if the file type is one of following, the window will be ignored
-  --           filetype = { "neo-tree", "neo-tree-popup", "notify" },
-  --
-  --           -- if the buffer type is one of following, the window will be ignored
-  --           buftype = { "terminal", "quickfix" },
-  --         },
-  --       },
-  --       other_win_hl_color = "#e35e4f",
-  --     })
-  --   end,
-  -- },
 
   -- explorer
   {
@@ -44,7 +16,7 @@ return {
       {
         "<leader>E",
         function()
-          require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
+          require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
         end,
         desc = "Explorer NeoTree (cwd)",
       },
@@ -82,21 +54,6 @@ return {
     "lewis6991/gitsigns.nvim",
     opts = {
       current_line_blame = true,
-    },
-  },
-
-  -- illuminate
-  {
-    "RRethy/vim-illuminate",
-    enabled = false,
-  },
-
-  -- notify
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      level = "WARN",
-      top_down = false,
     },
   },
 
