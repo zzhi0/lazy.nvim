@@ -5,14 +5,8 @@ return {
   -- explorer
   {
     "nvim-neo-tree/neo-tree.nvim",
+    enabled = false,
     keys = {
-      -- {
-      --   "<leader>e",
-      --   function()
-      --     require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").get_root() })
-      --   end,
-      --   desc = "Explorer NeoTree (root dir)",
-      -- },
       {
         "<leader>E",
         function()
@@ -25,8 +19,10 @@ return {
     opts = {
       filesystem = {
         bind_to_cwd = false,
-        follow_current_file = true,
         use_libuv_file_watcher = true,
+        follow_current_file = {
+          enabled = true,
+        },
       },
       window = {
         mappings = {
