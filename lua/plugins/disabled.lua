@@ -1,9 +1,9 @@
 return {
   -- disabled
   { "ggandor/flit.nvim", enabled = false },
-  { "ggandor/leap.nvim", enabled = false },
+  { "https://codeberg.org/andyg/leap.nvim.git", enabled = false },
   { "folke/flash.nvim", enabled = false },
-  { "echasnovski/mini.animate", enabled = false },
+  { "nvim-mini/mini.animate", enabled = false },
   {
     "RRethy/vim-illuminate",
     enabled = false,
